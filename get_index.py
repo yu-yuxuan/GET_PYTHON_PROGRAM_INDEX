@@ -14,7 +14,7 @@ if __name__ == '__main__':
     filename=input('Enter output file name here(may equal to searchphrase): ') or "test" # "README.org"
     silentremove(filename)
     folder=input('Enter folder  here: ') or "."
-    searchphrase=input('Enter search phrase here(^\s*def): ') or "^\s*def" # get_index.py
+    searchphrase=input('Enter search phrase here(^\s*def\s+): ') or "^\s*def\s+" # get_index.py
     fileend=input('Enter file ends with here(.py): ') or ".py" # .py
     pattern = re.compile(searchphrase)
     for root, dirs, files in os.walk(folder):
@@ -33,6 +33,8 @@ if __name__ == '__main__':
                     #         myfile.write(searchlines[i].rstrip()+'===='+program_file+ '\n')
 
                         # for l in searchlines[i:i+3]:print(l),
+
+# 1. cancel def main()
 
 
 # pattern = re.compile("^def")
